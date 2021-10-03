@@ -1,8 +1,11 @@
 const FilterByName = (props) => {
   return (
     <>
-      <label htmlFor='name'>Buscar el personaje: </label>
+      <label className='labelName' htmlFor='name'>
+        Buscar el personaje:
+      </label>
       <input
+        className='inputName'
         type='text'
         name='name'
         id='name'

@@ -3,7 +3,7 @@ import FilterBySpecies from './FilterBySpecies';
 
 const Filters = (props) => {
   return (
-    <form onSubmit={props.handleForm}>
+    <form className='form' onSubmit={props.handleForm}>
       <FilterByName
         searchName={props.searchName}
         handleSearchName={props.handleSearchName}

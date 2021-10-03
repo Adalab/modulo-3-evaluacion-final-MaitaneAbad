@@ -50,6 +50,7 @@ const App = () => {
           handleSearchName={handleSearchName}
           handleSearchSpecies={handleSearchSpecies}
         />
+        <CharacterList data={filteredData} />
       </main>
       <footer></footer>
       {/* <Route path='/contacto'></Route>
@@ -64,7 +65,6 @@ const App = () => {
           </li>
         </ul>
       </nav> */}
-      <CharacterList data={filteredData} />
     </div>
   );
 };

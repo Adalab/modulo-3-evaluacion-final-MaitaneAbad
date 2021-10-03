@@ -3,6 +3,7 @@ const FilterBySpecies = (props) => {
     <>
       <label htmlFor='species'></label>
       <select
+        className='selectSpecies'
         name='species'
         id='species'
         value={props.searchSpecies}
