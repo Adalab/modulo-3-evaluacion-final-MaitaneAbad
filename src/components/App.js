@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 // import { Link, Route } from 'react-router-dom';
 import callToApi from '../services/callToApi';
 import Header from './Header';
+import Filters from './Filters';
 import CharacterList from './CharacterList';
 
 const App = () => {
@@ -42,30 +43,15 @@ const App = () => {
     <div className='page'>
       <Header />
       <main>
-        <h1>Personajes</h1>
-        <form onSubmit={handleForm}>
-          <label htmlFor='name'>Buscar el personaje: </label>
-          <input
-            type='text'
-            name='name'
-            id='name'
-            value={searchName}
-            onChange={handleSearchName}
-            placeholder='Ej: Morty'
-          />
-          <label htmlFor='species'></label>
-          <select
-            name='species'
-            id='species'
-            value={searchSpecies}
-            onChange={handleSearchSpecies}
-          >
-            <option value='all'>Todos</option>
-            <option value='Human'>Human</option>
-            <option value='Alien'>Alien</option>
-          </select>
-        </form>
+        <Filters
+          searchName={searchName}
+          searchSpecies={searchSpecies}
+          handleForm={handleForm}
+          handleSearchName={handleSearchName}
+          handleSearchSpecies={handleSearchSpecies}
+        />
       </main>
+      <footer></footer>
       {/* <Route path='/contacto'></Route>
 
       <nav>
