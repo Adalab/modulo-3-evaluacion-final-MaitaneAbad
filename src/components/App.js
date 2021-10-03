@@ -2,6 +2,7 @@ import '../styles/App.scss';
 import { useState, useEffect } from 'react';
 // import { Link, Route } from 'react-router-dom';
 import callToApi from '../services/callToApi';
+import CharacterList from './CharacterList';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -14,21 +15,7 @@ const App = () => {
   const handleForm = (ev) => {
     ev.preventDefault();
   };
-  const renderCharacters = () => {
-    return data
-      .filter((character) => {
-        return character.name.toLowerCase().includes(search.toLowerCase());
-      })
-      .map((character) => {
-        return (
-          <li key={character.id}>
-            <img src={character.img} alt={character.name} />
-            <h2>{character.name}</h2>
-            <p>{character.species}</p>
-          </li>
-        );
-      });
-  };
+
   const handleSearchInput = (ev) => {
     setSearch(ev.target.value);
   };
@@ -51,7 +38,7 @@ const App = () => {
           </li>
         </ul>
       </nav> */}
-      <ul>{renderCharacters()}</ul>
+      <CharacterList data={data} />
     </div>
   );
 };
