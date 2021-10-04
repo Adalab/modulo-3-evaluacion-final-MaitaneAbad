@@ -1,0 +1,26 @@
+.titlePageNotFound {
+  font-weight: 600;
+  font-size: 15px;
+  margin: 30px;
+  @media (min-width: 768px) {
+    font-size: 35px;
+  }
+  .titleImg {
+    font-size: 17px;
+    margin: 20px 10px;
+    color: red;
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
+  }
+  .pageNotFound {
+    width: 25%;
+    margin: auto;
+    text-align: center;
+
+    &:hover {
+      transform: rotate(720deg);
+      transition: transform 3s;
+    }
+  }
+}

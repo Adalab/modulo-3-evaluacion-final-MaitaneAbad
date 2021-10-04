@@ -7,6 +7,7 @@ import Filters from './Filters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 import Footer from './Footer';
+import NotFoundPage from './PageNotFound';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -74,20 +75,11 @@ const App = () => {
             <CharacterList data={filteredData} />
           </main>
         </Route>
+        <Route path='/'>
+          <NotFoundPage />
+        </Route>
       </Switch>
       <Footer />
-      {/* <Route path='/contacto'></Route>
-
-      <nav>
-        <ul>
-          <li>
-            <Link to='/'></Link>
-          </li>
-          <li>
-            <Link to='/contacto'></Link>
-          </li>
-        </ul>
-      </nav> */}
     </div>
   );
 };
