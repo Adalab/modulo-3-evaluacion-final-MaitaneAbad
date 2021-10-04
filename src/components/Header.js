@@ -1,7 +1,9 @@
+import logo from '../images/Rick_Morty.png';
+
 const Header = () => {
   return (
     <section>
-      <p>Logo de Rick and Morty (no consigo enlazarla.... ¬¬)</p>
+      <img src={logo} title='Rick y Morty' alt='Rick y Morty' />
     </section>
   );
 };

@@ -8,8 +8,13 @@ const callToApi = () => {
           species: data.species,
           id: data.id,
           img: data.image,
+          status: data.status,
+          episode: data.episode.length,
+          planet: data.origin.name,
         };
       });
+      console.log(characters);
+
       return characters;
     });
 };

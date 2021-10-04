@@ -1,10 +1,11 @@
 import '../styles/App.scss';
 import { useState, useEffect } from 'react';
-// import { Link, Route } from 'react-router-dom';
+import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import callToApi from '../services/callToApi';
 import Header from './Header';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
+import CharacterDetail from './CharacterDetail';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -18,6 +19,14 @@ const App = () => {
     });
   }, [searchName]);
 
+  const routeData = useRouteMatch('/character/:id');
+  const characterId = routeData !== null ? routeData.params.id : '';
+  const selectedCharacter = data.find(
+    (character) => character.id === parseInt(characterId)
+  );
+  console.log('selected', selectedCharacter);
+  console.log('id', characterId);
+  console.log('routeData', routeData);
   const handleForm = (ev) => {
     ev.preventDefault();
   };
@@ -38,20 +47,42 @@ const App = () => {
     .filter(
       (characterSpecies) =>
         searchSpecies === 'all' || characterSpecies.species === searchSpecies
-    );
+    )
+    .sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      } else if (a.name < b.name) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
   return (
     <div className='page'>
       <Header />
-      <main>
-        <Filters
-          searchName={searchName}
-          searchSpecies={searchSpecies}
-          handleForm={handleForm}
-          handleSearchName={handleSearchName}
-          handleSearchSpecies={handleSearchSpecies}
-        />
-        <CharacterList data={filteredData} />
-      </main>
+      <Switch>
+        <Route path='/character/:id'>
+          <CharacterDetail character={selectedCharacter} />
+        </Route>
+        <Route exact path='/'>
+          <main>
+            <Filters
+              searchName={searchName}
+              searchSpecies={searchSpecies}
+              handleForm={handleForm}
+              handleSearchName={handleSearchName}
+              handleSearchSpecies={handleSearchSpecies}
+            />
+            <CharacterList data={filteredData} />
+          </main>
+        </Route>
+        <Route>
+          <section>
+            <h2>Oh! Página equivocada</h2>
+            <p>Error 404!!!</p>
+          </section>
+        </Route>
+      </Switch>
       <footer></footer>
       {/* <Route path='/contacto'></Route>
 
