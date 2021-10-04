@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import '../styles/layout/characterList.scss';
 const CharacterCard = (props) => {
   return (
     <Link to={`./character/${props.characterData.id}`}>
@@ -8,8 +9,8 @@ const CharacterCard = (props) => {
         alt={`Foto de: ${props.characterData.name}`}
         title={`Foto de: ${props.characterData.name}`}
       />
-      <h2 className='h2'>{props.characterData.name}</h2>
-      <p>{props.characterData.species}</p>
+      <h2 className='name'>{props.characterData.name}</h2>
+      <p className='species'>{props.characterData.species}</p>
     </Link>
   );
 };

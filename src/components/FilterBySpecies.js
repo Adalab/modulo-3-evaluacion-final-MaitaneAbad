@@ -1,7 +1,9 @@
 const FilterBySpecies = (props) => {
   return (
     <>
-      <label htmlFor='species'></label>
+      <label htmlFor='species' className='labelName'>
+        Especie
+      </label>
       <select
         className='selectSpecies'
         name='species'

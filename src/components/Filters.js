@@ -1,5 +1,6 @@
 import FilterByName from './FilterByName';
 import FilterBySpecies from './FilterBySpecies';
+import '../styles/layout/form.scss';
 
 const Filters = (props) => {
   return (
