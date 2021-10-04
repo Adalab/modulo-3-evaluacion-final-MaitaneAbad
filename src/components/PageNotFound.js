@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom';
 
 const NotFoundPage = () => {
   return (
-    <div className='notFoundPage'>
-      <p className='notFoundPage__text'>
-        Página no encontrada. Vuelve por el portal{' '}
-      </p>
+    <div className=''>
+      <p className=''>Página no encontrada. Vuelve por el portal </p>
       <Link to='/'>
         {/* <img
           className='notFoundPage'
