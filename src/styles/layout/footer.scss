@@ -1,10 +1,36 @@
 @import '../core/variables';
 footer {
   padding: 10px;
-  font-size: $font-size-2;
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: $detailsResponse;
+  background-color: $detailsQuestion;
+  opacity: 0.75;
   @media (min-width: 768px) {
-    display: flex;
-    justify-content: end;
-    align-items: end;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: $font-size-4;
+  }
+  .name {
+    text-align: start;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .subtitle {
+    text-align: start;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .link {
+    text-align: end;
+    grid-column: 2;
+    grid-row: 2;
+    margin-right: 30px;
   }
 }

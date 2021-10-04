@@ -6,10 +6,12 @@
   color: inherit;
 }
 
-body {
-  line-height: 1;
-}
-ol,
 ul {
   list-style: none;
+}
+.body {
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  background-image: linear-gradient(180deg, #48e45a, #1a4270 45%);
 }
