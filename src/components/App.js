@@ -6,6 +6,7 @@ import Header from './Header';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
+import Footer from './Footer';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -24,9 +25,6 @@ const App = () => {
   const selectedCharacter = data.find(
     (character) => character.id === parseInt(characterId)
   );
-  console.log('selected', selectedCharacter);
-  console.log('id', characterId);
-  console.log('routeData', routeData);
   const handleForm = (ev) => {
     ev.preventDefault();
   };
@@ -76,14 +74,8 @@ const App = () => {
             <CharacterList data={filteredData} />
           </main>
         </Route>
-        <Route>
-          <section>
-            <h2>Oh! Página equivocada</h2>
-            <p>Error 404!!!</p>
-          </section>
-        </Route>
       </Switch>
-      <footer></footer>
+      <Footer />
       {/* <Route path='/contacto'></Route>
 
       <nav>

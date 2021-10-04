@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 const CharacterCard = (props) => {
   return (
-    <>
+    <Link to={`./character/${props.characterData.id}`}>
       <img
         className='imgApi'
         src={props.characterData.img}
@@ -9,7 +10,7 @@ const CharacterCard = (props) => {
       />
       <h2 className='h2'>{props.characterData.name}</h2>
       <p>{props.characterData.species}</p>
-    </>
+    </Link>
   );
 };
 export default CharacterCard;
