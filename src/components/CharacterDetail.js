@@ -21,26 +21,34 @@ const CharacterDetail = (props) => {
             <h2 className='nameDetail'>{props.character.name}</h2>
             <ul className='listDetail'>
               <li className='liDetail'>
-                Nombre:{' '}
+                Nombre :
                 <span className='liDetailsResponse'>
+                  {' '}
                   {props.character.species}
                 </span>
               </li>
               <li className='liDetail'>
-                ¿Vivo o muerto?:{' '}
+                ¿Vivo o muerto? :{'   '}
                 <span className='liDetailsResponse'>
-                  {props.character.status}
+                  {' '}
+                  {props.character.status === 'Dead' ? (
+                    <i class='fas fa-skull-crossbones'>{'c'}</i>
+                  ) : (
+                    <i class='fas fa-heart'></i>
+                  )}
                 </span>
               </li>
               <li className='liDetail'>
-                Planeta:{' '}
+                <i class='fas fa-home'> </i> :
                 <span className='liDetailsResponse'>
+                  {' '}
                   {props.character.planet}
                 </span>
               </li>
               <li className='liDetail'>
-                Episodios:{' '}
+                Episodios :
                 <span className='liDetailsResponse'>
+                  {' '}
                   {props.character.episode}
                 </span>
               </li>

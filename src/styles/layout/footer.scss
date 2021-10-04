@@ -1,10 +1,10 @@
+@import '../core/variables';
 footer {
-  padding: 20px;
-  display: block;
+  padding: 10px;
+  font-size: $font-size-2;
   @media (min-width: 768px) {
     display: flex;
     justify-content: end;
     align-items: end;
-    font-size: 15px;
   }
 }

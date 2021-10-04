@@ -1,14 +1,24 @@
 @import '../core/variables';
 .detail {
-  margin: 50px;
-  font-family: 'Stick No Bills', sans-serif;
+  height: 45vh;
+  margin: 65px 20px 77px 20px;
+  font-family: $family-bills;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (min-width: 700px) {
+    font-size: $font-size-2;
+  }
+  @media (min-width: 768px) {
+    height: 55.9vh;
+  }
+  @media (min-width: 1200px) {
+    margin-top: 75px;
+    height: 51.4vh;
+  }
 
   .paragraphDetail {
     font-size: $font-size;
-    padding: 21px 0;
     @media (min-width: 700px) {
       display: flex;
       justify-content: flex-end;
@@ -29,7 +39,6 @@
     .imgApiDetail {
       width: 175px;
       border-radius: 25px;
-      padding: 20px;
       @media (min-width: 700px) {
         width: 250px;
         border-radius: 45px;
@@ -40,7 +49,7 @@
     margin: 10px 0 20px;
     color: $name;
     @media (min-width: 700px) {
-      text-align: start;
+      text-align: end;
       font-size: $font-size-2;
     }
   }

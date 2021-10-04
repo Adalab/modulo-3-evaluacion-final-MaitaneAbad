@@ -1,19 +1,23 @@
+@import '../core/variables';
 .titlePageNotFound {
-  font-weight: 600;
-  font-size: 15px;
-  margin: 30px;
-  height: 100vh;
+  font-size: $font-size;
+  margin: 37px;
+  height: 60.5vh;
+  font-family: $family-bills;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (min-width: 700px) {
+    font-size: $font-size-2;
+  }
   @media (min-width: 768px) {
-    font-size: 35px;
+    height: 55.9vh;
   }
-  .titleImg {
-    font-size: 17px;
-    margin: 20px 10px;
-    color: red;
-    @media (min-width: 768px) {
-      font-size: 40px;
-    }
+  @media (min-width: 1200px) {
+    margin-top: 75px;
+    height: 51.4vh;
   }
+
   .pageNotFound {
     width: 25%;
     margin: auto;

@@ -10,7 +10,14 @@ const CharacterCard = (props) => {
         title={`Foto de: ${props.characterData.name}`}
       />
       <h2 className='name'>{props.characterData.name}</h2>
-      <p className='species'>{props.characterData.species}</p>
+      <p className='species'>
+        {' '}
+        {props.characterData.species === 'Alien' ? (
+          <i class='fab fa-reddit-alien'></i>
+        ) : (
+          <i class='fas fa-user-alt'></i>
+        )}
+      </p>
     </Link>
   );
 };

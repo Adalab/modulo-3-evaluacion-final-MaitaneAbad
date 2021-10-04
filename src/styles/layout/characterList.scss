@@ -11,13 +11,13 @@
     font-family: $family-bills;
 
     .imgApi {
-      width: 200px;
+      width: 195px;
       border-radius: 100px;
 
       transition: width 0.1s, box-shadow 0.25s;
       &:hover {
         box-shadow: 0 0 40px rgb(60, 255, 0);
-        width: 205px;
+        width: 200px;
       }
     }
     .name {
