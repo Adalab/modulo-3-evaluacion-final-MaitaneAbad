@@ -16,6 +16,7 @@
 
   .paragraphDetail {
     font-size: $font-size;
+    margin-bottom: 10px;
     @media (min-width: 700px) {
       display: flex;
       justify-content: flex-end;
