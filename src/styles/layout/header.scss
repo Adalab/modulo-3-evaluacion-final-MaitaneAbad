@@ -8,13 +8,13 @@
   .logo {
     transform: scale(40%);
     @media (min-width: 350px) {
-      transform: scale(60%);
+      transform: scale(50%);
     }
     @media (min-width: 500px) {
-      transform: scale(70%);
+      transform: scale(60%);
     }
     @media (min-width: 768px) {
-      transform: scale(130%);
+      transform: scale(115%);
     }
   }
 }

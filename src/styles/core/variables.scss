@@ -1,6 +1,16 @@
 .page {
-  background-image: url('../../images/thumb-1920-633270.png');
   color: white;
   text-align: center;
-  background-size: cover;
+  background-image: linear-gradient(to bottom, #48e45a, #1a4270 45%);
 }
+
+$font-size: 20px;
+$font-size-2: 35px;
+$font-size-3: 30px;
+$font-size-4: 25px;
+
+//colors
+$name: #f7ef13;
+$species: #db115b;
+$detailsQuestion: #48e45a;
+$detailsResponse: #f9055f;

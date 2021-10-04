@@ -1,9 +1,10 @@
 footer {
-  height: 5vh;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  font-size: 15px;
-  padding: 0.5px;
-  margin: 0 5px;
+  padding: 20px;
+  display: block;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 15px;
+  }
 }

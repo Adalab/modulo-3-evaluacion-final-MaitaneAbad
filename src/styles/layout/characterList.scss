@@ -1,3 +1,4 @@
+@import '../core/variables';
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -20,14 +21,15 @@
       }
     }
     .name {
-      color: #e1db19;
+      color: $name;
       width: 12ch;
       margin: 10px auto;
       font-size: 30px;
       height: 60px;
     }
     .species {
-      color: #88bb44;
+      color: $species;
+      border-color: greenyellow 5px solid;
       font-size: 30px;
     }
   }

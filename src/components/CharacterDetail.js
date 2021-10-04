@@ -6,7 +6,7 @@ const CharacterDetail = (props) => {
   console.log(props);
   if (props.character !== undefined) {
     return (
-      <div class='detail'>
+      <main class='detail'>
         <Link to='/' className='characterDetail'>
           <p className='paragraphDetail'>Volver atrás</p>
         </Link>
@@ -20,16 +20,34 @@ const CharacterDetail = (props) => {
           <div>
             <h2 className='nameDetail'>{props.character.name}</h2>
             <ul className='listDetail'>
-              <li className='liDetail'>{props.character.species}</li>
               <li className='liDetail'>
-                ¿Vivo o muerto?: {props.character.status}
+                Nombre:{' '}
+                <span className='liDetailsResponse'>
+                  {props.character.species}
+                </span>
               </li>
-              <li className='liDetail'>Planeta: {props.character.planet}</li>
-              <li className='liDetail'>Episodios: {props.character.episode}</li>
+              <li className='liDetail'>
+                ¿Vivo o muerto?:{' '}
+                <span className='liDetailsResponse'>
+                  {props.character.status}
+                </span>
+              </li>
+              <li className='liDetail'>
+                Planeta:{' '}
+                <span className='liDetailsResponse'>
+                  {props.character.planet}
+                </span>
+              </li>
+              <li className='liDetail'>
+                Episodios:{' '}
+                <span className='liDetailsResponse'>
+                  {props.character.episode}
+                </span>
+              </li>
             </ul>
           </div>
         </section>
-      </div>
+      </main>
     );
   } else {
     return <PageNotFound />;
