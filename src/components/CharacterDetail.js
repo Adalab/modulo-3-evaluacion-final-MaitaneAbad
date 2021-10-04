@@ -3,6 +3,28 @@ import '../styles/layout/characterDetail.scss';
 import PageNotFound from './PageNotFound';
 
 const CharacterDetail = (props) => {
+  function changeStatus() {
+    const status = props.character.status;
+    if (status === 'Alive') {
+      return (
+        <>
+          <i class='fab fa-reddit-alien'></i>
+        </>
+      );
+    } else if (status === 'Dead') {
+      return (
+        <>
+          <i class='fas fa-skull-crossbones'></i>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <i class='far fa-question-circle'></i>
+        </>
+      );
+    }
+  }
   console.log(props);
   if (props.character !== undefined) {
     return (
@@ -28,15 +50,8 @@ const CharacterDetail = (props) => {
                 </span>
               </li>
               <li className='liDetail'>
-                ¿Vivo o muerto? :{'   '}
-                <span className='liDetailsResponse'>
-                  {' '}
-                  {props.character.status === 'Dead' ? (
-                    <i class='fas fa-skull-crossbones'>{'c'}</i>
-                  ) : (
-                    <i class='fas fa-heart'></i>
-                  )}
-                </span>
+                ¿Vivo o muerto? :
+                <span className='liDetailsResponse'> {changeStatus()}</span>
               </li>
               <li className='liDetail'>
                 <i class='fas fa-home'> </i> :
