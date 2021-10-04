@@ -24,13 +24,17 @@
       color: $name;
       width: 12ch;
       margin: 10px auto;
-      font-size: 30px;
+      font-size: $font-size-3;
       height: 60px;
     }
     .species {
       color: $species;
-      border-color: greenyellow 5px solid;
-      font-size: 30px;
+      font-size: $font-size-3;
     }
   }
+}
+.error {
+  color: $name;
+  font-size: $font-size-3;
+  margin: 30px auto;
 }

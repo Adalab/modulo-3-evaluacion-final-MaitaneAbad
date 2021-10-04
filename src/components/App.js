@@ -72,7 +72,7 @@ const App = () => {
               handleSearchName={handleSearchName}
               handleSearchSpecies={handleSearchSpecies}
             />
-            <CharacterList data={filteredData} />
+            <CharacterList searchName={searchName} data={filteredData} />
           </main>
         </Route>
         <Route path='/'>
