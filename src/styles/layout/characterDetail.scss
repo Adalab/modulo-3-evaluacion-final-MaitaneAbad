@@ -1,0 +1,56 @@
+.detail {
+  margin: 50px;
+  font-family: 'Stick No Bills', sans-serif;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 450px) {
+    height: 55vh;
+  }
+
+  .paragraphDetail {
+    font-size: 20px;
+    padding: 20px 0;
+    @media (min-width: 700px) {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 10px;
+      font-size: 30px;
+    }
+  }
+  .sectionDetail {
+    font-size: 20px;
+    @media (min-width: 700px) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 25px;
+    }
+
+    .imgApiDetail {
+      width: 200px;
+      border-radius: 25px;
+      padding: 20px;
+      @media (min-width: 700px) {
+        width: 250px;
+        border-radius: 45px;
+      }
+    }
+  }
+  .nameDetail {
+    margin: 10px 0 20px;
+    @media (min-width: 700px) {
+      text-align: start;
+      font-size: 35px;
+    }
+  }
+  .listDetail {
+    @media (min-width: 700px) {
+      text-align: end;
+    }
+
+    .liDetail {
+      margin: 5px 0;
+    }
+  }
+}
