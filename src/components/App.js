@@ -66,6 +66,7 @@ const App = () => {
         <Route exact path='/'>
           <main>
             <Filters
+              inputType='text'
               searchName={searchName}
               searchSpecies={searchSpecies}
               handleForm={handleForm}

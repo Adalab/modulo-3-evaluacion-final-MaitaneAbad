@@ -8,6 +8,7 @@ const Filters = (props) => {
       <FilterByName
         searchName={props.searchName}
         handleSearchName={props.handleSearchName}
+        inputType={props.inputType}
       />
       <FilterBySpecies
         searchSpecies={props.FilterBySpecies}
