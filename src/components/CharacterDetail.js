@@ -43,7 +43,7 @@ const CharacterDetail = (props) => {
             <h2 className='nameDetail'>{props.character.name}</h2>
             <ul className='listDetail'>
               <li className='liDetail'>
-                Nombre :
+                Especie :
                 <span className='liDetailsResponse'>
                   {' '}
                   {props.character.species}
