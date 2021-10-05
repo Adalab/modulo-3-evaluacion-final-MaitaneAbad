@@ -10,12 +10,12 @@ footer {
   bottom: 0;
   width: 100%;
   color: $detailsResponse;
+  font-weight: 900;
   background-color: $detailsQuestion;
   opacity: 0.6;
   @media (min-width: 768px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    font-size: $font-size-4;
   }
   .name {
     text-align: start;
