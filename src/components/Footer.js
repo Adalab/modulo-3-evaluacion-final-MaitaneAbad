@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <>
       <footer className='footer'>
-        <p className='name'> &copy; Maitane Abad Conde </p>
+        <p className='name'> &copy; Maitane Abad Conde - 2021 </p>
         <p className='subtitle'>Evaluación Final React.js</p>
         <a
           className='link'
