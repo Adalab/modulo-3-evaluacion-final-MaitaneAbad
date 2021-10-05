@@ -43,11 +43,13 @@
       }
     }
     .divDetail {
-      background-color: black;
-      opacity: 0.8;
-      border-radius: 30px;
-      padding: 15px;
-      margin: auto;
+      @media (min-width: 700px) {
+        background-color: black;
+        opacity: 0.8;
+        border-radius: 30px;
+        padding: 15px;
+        margin: auto;
+      }
     }
   }
   .nameDetail {
