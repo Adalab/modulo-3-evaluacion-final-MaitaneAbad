@@ -39,7 +39,7 @@ const CharacterDetail = (props) => {
             alt={`Foto de: ${props.character.name}`}
             title={`Foto de: ${props.character.name}`}
           />
-          <div>
+          <div className='divDetail'>
             <h2 className='nameDetail'>{props.character.name}</h2>
             <ul className='listDetail'>
               <li className='liDetail'>
