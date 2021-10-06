@@ -26,12 +26,14 @@
   }
   .sectionDetail {
     font-size: $font-size;
+
     @media (min-width: 700px) {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
       font-size: $font-size-4;
+      margin: auto;
     }
 
     .imgApiDetail {
@@ -48,7 +50,7 @@
         opacity: 0.8;
         border-radius: 30px;
         padding: 15px;
-        margin: auto;
+        margin-left: 100px;
       }
     }
   }

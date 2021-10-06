@@ -1,5 +1,6 @@
 import FilterByName from './FilterByName';
 import FilterBySpecies from './FilterBySpecies';
+import FilterByStatus from './FilterByStatus';
 import '../styles/layout/form.scss';
 
 const Filters = (props) => {
@@ -13,6 +14,10 @@ const Filters = (props) => {
       <FilterBySpecies
         searchSpecies={props.FilterBySpecies}
         handleSearchSpecies={props.handleSearchSpecies}
+      />
+      <FilterByStatus
+        searchStatus={props.FilterByStatus}
+        handleSearchStatus={props.handleSearchStatus}
       />
     </form>
   );

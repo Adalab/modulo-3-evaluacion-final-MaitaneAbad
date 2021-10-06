@@ -12,14 +12,14 @@ import NotFoundPage from './PageNotFound';
 const App = () => {
   const [data, setData] = useState([]);
   const [searchName, setSearchName] = useState('');
-
+  const [searchStatus, setSearchStatus] = useState('');
   const [searchSpecies, setSearchSpecies] = useState('all');
 
   useEffect(() => {
     callToApi().then((response) => {
       setData(response);
     });
-  }, [searchName]);
+  }, []); // cuando esté vacio llamamos solo una vez a la api
 
   const routeData = useRouteMatch('/character/:id');
   const characterId = routeData !== null ? routeData.params.id : '';
@@ -36,7 +36,10 @@ const App = () => {
   const handleSearchSpecies = (ev) => {
     setSearchSpecies(ev.currentTarget.value);
   };
-
+  const handleSearchStatus = (ev) => {
+    console.log(ev.currentTarget.value);
+    setSearchStatus(ev.currentTarget.value);
+  };
   const filteredData = data
     .filter((character) =>
       character.name
@@ -47,6 +50,14 @@ const App = () => {
       (characterSpecies) =>
         searchSpecies === 'all' || characterSpecies.species === searchSpecies
     )
+    .filter((characterStatus) => {
+      if (searchStatus !== '') {
+        return characterStatus.status === searchStatus;
+      } else {
+        return true;
+      }
+    })
+
     .sort((a, b) => {
       if (a.name > b.name) {
         return 1;
@@ -69,9 +80,11 @@ const App = () => {
               inputType='text'
               searchName={searchName}
               searchSpecies={searchSpecies}
+              searchStatus={setSearchStatus}
               handleForm={handleForm}
               handleSearchName={handleSearchName}
               handleSearchSpecies={handleSearchSpecies}
+              handleSearchStatus={handleSearchStatus}
             />
             <CharacterList searchName={searchName} data={filteredData} />
           </main>
