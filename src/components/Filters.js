@@ -15,10 +15,10 @@ const Filters = (props) => {
         searchSpecies={props.FilterBySpecies}
         handleSearchSpecies={props.handleSearchSpecies}
       />
-      <FilterByStatus
+      {/* <FilterByStatus
         searchStatus={props.FilterByStatus}
         handleSearchStatus={props.handleSearchStatus}
-      />
+      /> */}
     </form>
   );
 };
