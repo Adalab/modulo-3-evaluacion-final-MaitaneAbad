@@ -18,7 +18,7 @@ const Filters = (props) => {
       {/* <FilterByStatus
         searchStatus={props.FilterByStatus}
         handleSearchStatus={props.handleSearchStatus}
-      /> */}
+      />  */}
     </form>
   );
 };
