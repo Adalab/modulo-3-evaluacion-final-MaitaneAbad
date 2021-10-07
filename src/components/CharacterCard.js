@@ -18,7 +18,7 @@ const CharacterCard = (props) => {
           <i class='fas fa-user-alt'></i>
         )}
       </p>
-      <p>{props.characterData.status}</p>
+      {/* <p>{props.characterData.status}</p> */}
     </Link>
   );
 };
