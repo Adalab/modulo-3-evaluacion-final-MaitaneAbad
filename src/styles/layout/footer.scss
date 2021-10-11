@@ -1,28 +1,28 @@
 @import '../core/variables';
 footer {
-  padding: 10px;
-  font-size: 15px;
+  padding: 5px;
+  font-size: 12px;
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 1fr 1fr;
-  grid-row-gap: 5px;
+  grid-row-gap: 3px;
   position: fixed;
   bottom: 0;
   width: 100%;
   color: $detailsResponse;
   font-weight: 900;
+  font-family: $family-bills;
   background-color: $detailsQuestion;
   opacity: 0.6;
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
+  align-items: center;
   .name {
+    margin-left: 10px;
     text-align: start;
     grid-column: 1;
     grid-row: 1;
   }
   .subtitle {
+    margin-left: 10px;
     text-align: start;
     grid-column: 1;
     grid-row: 2;
@@ -32,5 +32,6 @@ footer {
     grid-column: 2;
     grid-row: 2;
     margin-right: 30px;
+    font-size: 17px;
   }
 }
