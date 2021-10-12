@@ -26,6 +26,7 @@ const App = () => {
   const selectedCharacter = data.find(
     (character) => character.id === parseInt(characterId)
   );
+
   const handleForm = (ev) => {
     ev.preventDefault();
   };
@@ -33,13 +34,16 @@ const App = () => {
   const handleSearchName = (ev) => {
     setSearchName(ev.currentTarget.value);
   };
+
   const handleSearchSpecies = (ev) => {
     setSearchSpecies(ev.currentTarget.value);
   };
+
   const handleSearchStatus = (ev) => {
     console.log(ev.currentTarget.value);
     setSearchStatus(ev.currentTarget.value);
   };
+
   const filteredData = data
     .filter((character) =>
       character.name
@@ -67,6 +71,7 @@ const App = () => {
         return 0;
       }
     });
+
   return (
     <div className='page'>
       <Header />
