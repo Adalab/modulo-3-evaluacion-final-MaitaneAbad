@@ -59,8 +59,8 @@
     margin: 10px 0 20px;
     color: $name;
     @media (min-width: 700px) {
-      text-align: end;
-      font-size: $font-size-2;
+      text-align: start;
+      font-size: $font-size-3;
     }
   }
   .listDetail {

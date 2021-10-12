@@ -1,7 +1,7 @@
 const FilterBystatus = (props) => {
   return (
     <>
-      <label> Filtro status</label>
+      <label> Estado </label>
       <label htmlFor='Alive'>
         Vivo
         <input
